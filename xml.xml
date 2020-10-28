@@ -1,0 +1,12 @@
+<?xml versio="1.0"?>
+<cart>
+    <product>
+        <name></name>
+        <quantity>
+        1
+        </quantity>
+        <price></price>
+
+    </product>
+    <position></position>
+</cart>
