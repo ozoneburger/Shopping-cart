@@ -150,10 +150,8 @@ getData = function()
 
 			for(i = 1; i <= items; i++)
 			{
-				var book = cart.childNodes[(i*4)-4];
-				var title = book.firstChild.childNodes[0].textContent;
+				var product = cart.childNodes[(i*4)-4];
 				var quantity = parseInt(book.lastChild.childNodes[0].textContent);
-				var ISBN = cart.childNodes[(i*4)-3].childNodes[0].textContent;
 				var price = parseFloat(cart.childNodes[(i*4)-2].childNodes[0].textContent);
 				var position = parseInt(cart.childNodes[(i*4)-1].childNodes[0].textContent);
 				var total = price * quantity;
@@ -162,7 +160,7 @@ getData = function()
 				if (window.ActiveXObject)
 				{
 					spantag.innerHTML += "<br>";
-					spantag.innerHTML += " Book: " + title + "<br>";
+					spantag.innerHTML += " Product: " + product + "<br>";
 					spantag.innerHTML += " " + "ISBN: " + ISBN + "<br>";
 					spantag.innerHTML += " Number: " + quantity + "<br>" + "Price: $" + total.toFixed(2) + "<br><br>";
 					spantag.innerHTML += remove + "<br>";
