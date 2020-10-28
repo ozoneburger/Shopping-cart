@@ -49,6 +49,7 @@ same product twice will NOT create two cart items)
   <center><h1>MITRE 20</h1><center>
 
 </head>
+
 <body onload="" onunload="deleteTempXMLs(); deleteXML('cart.xml');">
     <div id="1"> <br/>
     <b>Product: </b><span name="Product">SledgeHammer</span><br />
