@@ -85,7 +85,7 @@ function addRemoveProduct(action, position)
     var price = document.getElementsByTagName("span")[(position*2)-1].childNodes[0].textContent;
     
     if (action == "add"){
-        alert("Adding" + product + " and " + price);
+        alert("Adding " + product + " and " + price);
 
         xhr.open("GET", "processCart.php?action=" + action + "&productname=" + product + "&productprice=" + price, true);
     }
