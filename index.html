@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript" src="xhr.js"></script>
+    <script type="text/javascript" src="shoppingcartscript.js"></script>
+  <style type="text/css">
+  div {
+    float: center;
+  }
+  </style>
+
+  <center><h1>MITRE 20</h1><center>
+</head>
+
+<body onload="loadProducts()">
+    <!-- <br/>
+    <span name="Product1"></span><br />
+    <b>Price: $</b><span name="price1"></span><br />
+    <br /> -->
+    <div id="1">
+        <b>Product: </b><span name="product1"></span></br>
+        <b>Price: </b><span name="price1"></span></br>
+    </div>
+    <input type = "button" name="addItem1Button" value="Add to cart" onclick="addRemoveProduct('add', 1)"/> <br/> <br/>
+    <!-- <a href="#" onclick="addItemtoCart('processcart.php', 'cart', $products, price2.value)">Add Item to Shopping Cart</a> <br /> -->
+    <br />
+    <div id="2"> 
+        <b>Product: </b><span name="product1"></span></br>
+        <b>Price: </b><span name="price1"></span></br>
+    </div>
+    <input type = "button" name="addItem1Button" value="Add to cart" onclick="addRemoveProduct('add', 2)"/> <br/> <br/>
+    <br />
+    <div id="3"> 
+        <b>Product: </b><span name="product1"></span></br>
+        <b>Price: </b><span name="price1"></span></br>
+    </div>
+    <input type = "button" name="addItem1Button" value="Add to cart" onclick="addRemoveProduct('add', 3)"/> <br/> <br/>
+    <br />
+    <div id="4"> 
+        <b>Product: </b><span name="product1"></span></br>
+        <b>Price: </b><span name="price1"></span></br>
+    </div>
+    <input type = "button" name="addItem1Button" value="Add to cart" onclick="addRemoveProduct('add', 4)"/> <br/> <br/>
+    <br />
+    <div id="5">
+        <b>Product: </b><span name="product1"></span></br>
+        <b>Price: </b><span name="price1"></span></br>
+    </div>
+    <input type = "button" name="addItem1Button" value="Add to cart" onclick="addRemoveProduct('add', 5)"/> <br/> <br/>
+    <br />
+
+    <div id="cart">
+    <br>Shopping cart is empty!
+    </div>
+</body>
+</html>
+
