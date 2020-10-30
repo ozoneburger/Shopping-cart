@@ -1,6 +1,36 @@
 var xhr = createRequest();
 
-function addItemtoCart(){}
+function addItemtoCart(){
+    if (xhr.readyState == 4 && xhr.status == 200){
+        var cartDivID = document.getElementById("cart");
+        var productName;
+        var productPrice;
+        var serverResponse = JSON.parse(xhr.responseText);
+        //var keys = Object.keys(serverResponse);
+        if(serverResponse!= null)
+        {
+            if(window.ActiveXObject)
+            {
+                productName = serverResponse[0].name;
+                productPrice = serverResponse[0].price;
+                productAmount = serverResponse[0].amount;
+            }else{
+                productName = serverResponse[0].name;
+                productPrice = serverResponse[0].price;
+                productAmount = serverRespons[0].amount;
+            }
+            cartDivID.innerHTML = "" + productName + productPrice + productAmount;
+        }else{
+            productDivID1.innerHTML = "";
+            productDivID2.innerHTML = "";
+            productDivID3.innerHTML = "";
+            productDivID4.innerHTML = "";
+            productDivID5.innerHTML = "";
+            alert("Error can't load products :)");
+        }
+        
+    }
+}
 
 function displayProductList(){
     if (xhr.readyState == 4 && xhr.status == 200){
@@ -89,6 +119,6 @@ function addRemoveProduct(action, position)
 
         xhr.open("GET", "processCart.php?action=" + action + "&productname=" + product + "&productprice=" + price, true);
     }
-    xHRObject.onreadystatechange = getData;
+    xHRObject.onreadystatechange = addItemtoCart;
     xHRObject.send(null);
 }

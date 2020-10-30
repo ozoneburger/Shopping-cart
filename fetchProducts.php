@@ -1,5 +1,4 @@
 <?php
-    session_start();
             // ######## please do not alter the following code ########
             $products = [
             [ "name" => "Sledgehammer", "price" => 125.75 ],
